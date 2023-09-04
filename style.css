@@ -6,8 +6,21 @@
     box-sizing: border-box;
 }
 
+li {
+    list-style-type: none;
+}
+
 body {
     background: #4AC29A;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #4AC29A, #BDFFF3);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #a5cfcd, #e1ecec); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.navbar {
+    display: flex;
+}
+
+.nav-list {
+    display: flex;
+    
 }
