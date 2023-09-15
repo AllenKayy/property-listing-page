@@ -8,25 +8,233 @@
     <title>Property Listing</title>
 </head>
 <body>
-    <header class="navbar">
-        <div class="logo">
-            <img src="./assets/svg/logo-img.svg" alt="checkhouse logo">
-            <span class="logo-text">CheckHouse</span>
+    <section class="section1" id="home">
+        <header class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="./assets/svg/logo-img.svg" alt="checkhouse logo">
+                    <span class="logo-text">CheckHouse</span>
+                </a>
+            </div>
+
+            <ul class="nav-list mid-nav-list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about_us">About us</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#agent">Agents</a></li>
+            </ul>
+
+            <div class="nav-list right-nav-list">
+                    <p class="contact">Contact</p>
+                    <button class="book-now-btn btn">Book Now</button>
+            </div>
+        </header>
+
+        <main>
+            <h1 class="main-landing-heading">Looking for a new home?.</h1>
+
+            <p class="main-landing-text small-text">Find the right home at the right price. We'll help you define your dream home and help you find it when it hits the market.</p>
+
+            <div class="search-query-section">
+                <div class="search-query-container">
+                    <div class="search-query">
+                        <img src="./assets/svg/location-dot-solid.svg" alt="location svg" class="search-query-logo">
+                        <span>Location</span>
+                        <select name="location" id="location">
+                            <option value="UAE" selected>UAE</option>
+                        </select>
+                    </div>
+
+                    <span class="span"></span>
+
+                    <div class="search-query">
+                        <img src="./assets/svg/house-solid.svg" alt="house svg" class="search-query-logo">
+                        <span>House Type</span>
+                        <select name="location" id="location">
+                            <option value="UAE" selected>UAE</option>
+                        </select>
+                    </div>
+
+                    <span class="span"></span>
+
+                    <div class="search-query">
+                        <img src="./assets/svg/tag-solid.svg" alt="price tag svg"class="search-query-logo">
+                        <span>Price Range</span>
+                        <select name="location" id="location">
+                            <option value="UAE" selected>UAE</option>
+                        </select>
+                    </div>
+                </div>
+                <button class="search-btn btn">Search</button>
+            </div>
+            
+            <div class="flexible-props">
+                <div class="stats">
+                    <div class="stats-props">960+
+                        <span>Property build</span>
+                    </div>
+                    <div class="stats-props lower">$122M+
+                        <span>Net distribution to investors</span>
+                    </div>
+                    <div class="stats-props">$1B
+                        <span>Owned transation value</span>
+                    </div>
+                </div>
+
+                <img src="./assets/images/home-image.jpg" alt="A house" class="flexible-props-img">
+            </div>
+        </main>
+    </section>
+
+    <aside class="customers">
+        <p class="small-text">We are trusted by 1000+ customers</p>
+
+        <div class="stacks">
+            <div>
+                <img src="./assets/svg/html5.svg" alt="html" class="stacks-logo"> HTML
+            </div>
+            <div>
+                <img src="./assets/svg/css3.svg" alt="html" class="stacks-logo"> CSS
+            </div>
+            <div>
+                <img src="./assets/svg/js.svg" alt="html" class="stacks-logo">JavaScript
+            </div>
+            <div>
+                <img src="./assets/svg/code-solid.svg" alt="html" class="stacks-logo"> API
+            </div>
+            <div>
+                <img src="./assets/svg/vcs.svg" alt="html" class="stacks-logo"> GIT
+            </div>
         </div>
+    </aside>
 
-        <ul class="nav-list mid-nav-list">
-            <li>Home</li>
-            <li>Gallery</li>
-            <li>Agents</li>
-            <li>About us</li>
-        </ul>
+    <section class="section2" id="about_us">
+        <img src="./assets/images/section2-image.jpg" alt="A house" width="350px" class="section2-img">
 
-        <div class="nav-list right-nav-list">
-                <p class="contact">Contact</p>
-                <button class="book-now-btn">Book Now</button>
+        <div>
+            <h2 class="section2-heading">
+                Trusted Premier Real Estate Company in the UAE
+            </h2>
+
+            <p class="section2-text small-text">
+                CheckHouse UAE, Is a real estate company registered in the UAE. We can help you find your dream home and property throughout United Arab Emirates, including Dubia, Abu-Dhabi and the Eastern Regions.
+            </p>
+
+            <ul class="about-us-list">
+                <li>
+                    <img src="./assets/svg/check-solid.svg" class="check-logo">
+                    <span>Affordable prices</span>
+                </li>
+                <li>
+                    <img src="./assets/svg/check-solid.svg" class="check-logo">
+                    <span>Flexible payment plans</span>
+                </li>
+                <li>
+                    <img src="./assets/svg/check-solid.svg" class="check-logo">
+                    <span>Residential and Country houses</span>
+                </li>
+                <li>
+                    <img src="./assets/svg/check-solid.svg" class="check-logo">
+                    <span>Property Insurance</span>
+                </li>
+            </ul>
+
+            <button class="read-more-btn btn">Read More</button>
         </div>
-    </header>
+    </section>
 
+    <section class="section3" id="gallery">
+        <h2>Available Properties</h2>
+
+        <div class="property-container">
+            <div class="property-card">
+                <img src="./assets/images/house-img.png"class="property-image">
+                <p class="title-price">Fully detached duplex Fully detached duplex</p>
+                <p class="title-price">$2.5M</p>
+                <div>
+                    <img src="./assets/svg/location-dot-solid.svg" alt="location svg" class="location-svg">
+                    <span class="location">Abu-Dhabi</span>
+                </div>
+            </div>
+
+            <div class="property-card">
+                <img src="./assets/images/house-img.png"class="property-image">
+                <p class="title-price">Fully detached duplex Fully detached duplex</p>
+                <p class="title-price">$2.5M</p>
+                <div>
+                    <img src="./assets/svg/location-dot-solid.svg" alt="location svg" class="location-svg">
+                    <span class="location">Abu-Dhabi</span>
+                </div>
+            </div>
+
+            <div class="property-card">
+                <img src="./assets/images/house-img.png"class="property-image">
+                <p class="title-price">Fully detached duplex Fully detached duplex</p>
+                <p class="title-price">$2.5M</p>
+                <div>
+                    <img src="./assets/svg/location-dot-solid.svg" alt="location svg" class="location-svg">
+                    <span class="location">Abu-Dhabi</span>
+                </div>
+            </div>
+
+            <div class="property-card">
+                <img src="./assets/images/house-img.png"class="property-image">
+                <p class="title-price">Fully detached duplex Fully detached duplex</p>
+                <p class="title-price">$2.5M</p>
+                <div>
+                    <img src="./assets/svg/location-dot-solid.svg" alt="location svg" class="location-svg">
+                    <span class="location">Abu-Dhabi</span>
+                </div>
+            </div>
+
+            <div class="property-card">
+                <img src="./assets/images/house-img.png"class="property-image">
+                <p class="title-price">Fully detached duplex Fully detached duplex</p>
+                <p class="title-price">$2.5M</p>
+                <div>
+                    <img src="./assets/svg/location-dot-solid.svg" alt="location svg" class="location-svg">
+                    <span class="location">Abu-Dhabi</span>
+                </div>
+            </div>
+
+            <div class="property-card">
+                <img src="./assets/images/house-img.png"class="property-image">
+                <p class="title-price">Fully detached duplex Fully detached duplex</p>
+                <p class="title-price">$2.5M</p>
+                <div>
+                    <img src="./assets/svg/location-dot-solid.svg" alt="location svg" class="location-svg">
+                    <span class="location">Abu-Dhabi</span>
+                </div>
+            </div>
+
+            <div class="property-card">
+                <img src="./assets/images/house-img.png"class="property-image">
+                <p class="title-price">Fully detached duplex Fully detached duplex</p>
+                <p class="title-price">$2.5M</p>
+                <div>
+                    <img src="./assets/svg/location-dot-solid.svg" alt="location svg" class="location-svg">
+                    <span class="location">Abu-Dhabi</span>
+                </div>
+            </div>
+
+            <div class="property-card">
+                <img src="./assets/images/house-img.png"class="property-image">
+                <p class="title-price">Fully detached duplex Fully detached duplex</p>
+                <p class="title-price">$2.5M</p>
+                <div>
+                    <img src="./assets/svg/location-dot-solid.svg" alt="location svg" class="location-svg">
+                    <span class="location">Abu-Dhabi</span>
+                </div>
+            </div>
+            <!-- <div class="property-card"></div>
+            <div class="property-card"></div>
+            <div class="property-card"></div>
+            <div class="property-card"></div>
+            <div class="property-card"></div>
+            <div class="property-card"></div>
+            <div class="property-card"></div> -->
+        </div>
+    </section>
     <script src="script.js"></script>
 </body>
 </html>
