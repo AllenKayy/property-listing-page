@@ -18,22 +18,41 @@
             </div>
 
             <ul class="nav-list mid-nav-list">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about_us">About us</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#agent">Agents</a></li>
+                <li class="nav-item">
+                    <a href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about_us">About us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#gallery">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#agent">Agents</a>
+                </li>
             </ul>
 
             <div class="nav-list right-nav-list">
                     <p class="contact">Contact</p>
                     <button class="book-now-btn btn">Book Now</button>
             </div>
+
+            <div class="hamburger-menu">
+                <button id="hamburger">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </header>
 
         <main>
-            <h1 class="main-landing-heading">Looking for a new home?.</h1>
+            <h1 class="main-landing-heading">
+                Looking for a new home?.
+            </h1>
 
-            <p class="main-landing-text small-text">Find the right home at the right price. We'll help you define your dream home and help you find it when it hits the market.</p>
+            <p class="main-landing-text small-text">
+                Find the right home at the right price. We'll help you define your dream home and help you find it when it hits the market.
+            </p>
 
             <div class="search-query-section">
                 <div class="search-query-container">
@@ -65,7 +84,7 @@
                         </select>
                     </div>
                 </div>
-                <button class="search-btn btn">Search</button>
+                <button class="search-btn">Search</button>
             </div>
             
             <div class="flexible-props">
@@ -147,7 +166,7 @@
         <h2>Available Properties</h2>
 
         <div class="property-container">
-            <div class="property-card">
+            <!-- <div class="property-card">
                 <img src="./assets/images/house-img.png"class="property-image">
                 <p class="title-price">Fully detached duplex Fully detached duplex</p>
                 <p class="title-price">$2.5M</p>
@@ -155,86 +174,16 @@
                     <img src="./assets/svg/location-dot-solid.svg" alt="location svg" class="location-svg">
                     <span class="location">Abu-Dhabi</span>
                 </div>
-            </div>
-
-            <div class="property-card">
-                <img src="./assets/images/house-img.png"class="property-image">
-                <p class="title-price">Fully detached duplex Fully detached duplex</p>
-                <p class="title-price">$2.5M</p>
-                <div>
-                    <img src="./assets/svg/location-dot-solid.svg" alt="location svg" class="location-svg">
-                    <span class="location">Abu-Dhabi</span>
-                </div>
-            </div>
-
-            <div class="property-card">
-                <img src="./assets/images/house-img.png"class="property-image">
-                <p class="title-price">Fully detached duplex Fully detached duplex</p>
-                <p class="title-price">$2.5M</p>
-                <div>
-                    <img src="./assets/svg/location-dot-solid.svg" alt="location svg" class="location-svg">
-                    <span class="location">Abu-Dhabi</span>
-                </div>
-            </div>
-
-            <div class="property-card">
-                <img src="./assets/images/house-img.png"class="property-image">
-                <p class="title-price">Fully detached duplex Fully detached duplex</p>
-                <p class="title-price">$2.5M</p>
-                <div>
-                    <img src="./assets/svg/location-dot-solid.svg" alt="location svg" class="location-svg">
-                    <span class="location">Abu-Dhabi</span>
-                </div>
-            </div>
-
-            <div class="property-card">
-                <img src="./assets/images/house-img.png"class="property-image">
-                <p class="title-price">Fully detached duplex Fully detached duplex</p>
-                <p class="title-price">$2.5M</p>
-                <div>
-                    <img src="./assets/svg/location-dot-solid.svg" alt="location svg" class="location-svg">
-                    <span class="location">Abu-Dhabi</span>
-                </div>
-            </div>
-
-            <div class="property-card">
-                <img src="./assets/images/house-img.png"class="property-image">
-                <p class="title-price">Fully detached duplex Fully detached duplex</p>
-                <p class="title-price">$2.5M</p>
-                <div>
-                    <img src="./assets/svg/location-dot-solid.svg" alt="location svg" class="location-svg">
-                    <span class="location">Abu-Dhabi</span>
-                </div>
-            </div>
-
-            <div class="property-card">
-                <img src="./assets/images/house-img.png"class="property-image">
-                <p class="title-price">Fully detached duplex Fully detached duplex</p>
-                <p class="title-price">$2.5M</p>
-                <div>
-                    <img src="./assets/svg/location-dot-solid.svg" alt="location svg" class="location-svg">
-                    <span class="location">Abu-Dhabi</span>
-                </div>
-            </div>
-
-            <div class="property-card">
-                <img src="./assets/images/house-img.png"class="property-image">
-                <p class="title-price">Fully detached duplex Fully detached duplex</p>
-                <p class="title-price">$2.5M</p>
-                <div>
-                    <img src="./assets/svg/location-dot-solid.svg" alt="location svg" class="location-svg">
-                    <span class="location">Abu-Dhabi</span>
-                </div>
-            </div>
-            <!-- <div class="property-card"></div>
-            <div class="property-card"></div>
-            <div class="property-card"></div>
-            <div class="property-card"></div>
-            <div class="property-card"></div>
-            <div class="property-card"></div>
-            <div class="property-card"></div> -->
-        </div>
+            </div> -->
+        </div>    
     </section>
     <script src="script.js"></script>
+    <script>
+        const hamburger = document.querySelector("#hamburger");
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+        })
+    </script>
 </body>
 </html>
