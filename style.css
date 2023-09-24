@@ -552,7 +552,8 @@ select {
     /* overflow: auto; */
 }
 
-.property-card{
+.property-card {
+    position: relative;
     max-width: 25rem;
     margin-bottom: 3rem;
     height: auto;
@@ -560,7 +561,7 @@ select {
     padding: 1.6rem;
     border-radius: 4px;
     user-select: none;
-    transition: transform .200ms;
+    transition: transform 200ms;
     cursor: pointer;
 }
 
@@ -572,23 +573,37 @@ select {
     border-radius: 6px;
     max-width: 100%;
     height: auto;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.6rem;
 }
 
 .property-card .title-price {
     font-size: 1.6rem;
     font-weight: 600;
-    margin-bottom: 1.2rem;
     line-height: 1.4;
+}
+
+.title-price:nth-child(3) {
+    margin-top: 1.2rem;
+}
+
+.property-purpose {
+    position: absolute;
+    bottom: 14.5rem;
+    left: 2rem;
+    font-size: 1.4rem;
+    font-weight: 900;
+    background-color: #00ff00;
+    padding: 2px 4px;
 }
 
 .location-svg {
     width: 1rem;
     opacity: .4;
     margin-right: .2rem;
+    margin-top: 1.2rem;
 }
 
-span.location {
+span.location{
     font-size: 1.3rem;
     color: #4d4c4c;
 }
