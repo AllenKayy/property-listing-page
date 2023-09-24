@@ -1,15 +1,15 @@
-// let propertyEl = document.querySelector(".property-container");
-// let openModal = null; 
+let propertyEl = document.querySelector(".property-container");
+let openModal = null; 
 
-// const apiURL = 'https://bayut.p.rapidapi.com/properties/list?locationExternalIDs=5002%2C6020&purpose=for-rent&hitsPerPage=16&page=0&lang=en&sort=city-level-score&rentFrequency=monthly';
+const apiURL = 'https://bayut.p.rapidapi.com/properties/list?locationExternalIDs=5002%2C6020&purpose=for-rent&hitsPerPage=16&page=0&lang=en&sort=city-level-score&rentFrequency=monthly';
 
-// const options = {
-// 	method: 'GET',
-// 	headers: {
-// 		'X-RapidAPI-Key': '305660672cmshd09142b332e0e07p139f55jsn4e13048fda0d',
-// 		'X-RapidAPI-Host': 'bayut.p.rapidapi.com'
-// 	}
-// };
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '305660672cmshd09142b332e0e07p139f55jsn4e13048fda0d',
+		'X-RapidAPI-Host': 'bayut.p.rapidapi.com'
+	}
+};
 
 fetch(apiURL, options)
 .then(res => {
