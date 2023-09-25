@@ -166,17 +166,35 @@
         <h2>Available Properties</h2>
 
         <div class="property-container"> 
-            <p style="font-size: 2rem; margin-bottom: 2rem">Getting properties, Kindly hold on...</p>
+            <p style="font-size: 1.8rem; margin-bottom: 2rem">Getting properties, Kindly hold on...</p>
         </div>           
     </section>
 
     <script src="script.js"></script>
     <script>
         const hamburger = document.querySelector("#hamburger");
+        const midNavMenu = document.querySelector(".mid-nav-list");
+        const rightNavMenu = document.querySelector(".right-nav-list")
+
+        const closeMenu = () => {
+            midNavMenu.style.display = 'none';
+            rightNavMenu.style.display = 'none';
+        }
 
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
-        })
+            if (hamburger.classList.contains('active')) {
+                midNavMenu.style.display = 'flex';
+                rightNavMenu.style.display = 'flex';
+
+                window.addEventListener('scroll', () => {
+                    hamburger.classList.remove('active');
+                    closeMenu();
+                });
+            } else {
+                closeMenu();
+            }
+        });
     </script>
 </body>
 </html>
