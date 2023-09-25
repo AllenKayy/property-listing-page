@@ -138,7 +138,6 @@ html, body {
 #hamburger::after {
     height: .3rem;
     width: 100%;
-    /* background-color: #f3f1f1; */
     background-color: #000;
     transition: width 300ms, transform 300ms, background-color 300ms;
 }
@@ -212,7 +211,7 @@ main {
     row-gap: .8rem;
     font-size: 1.8rem;
     font-weight: 600;
-    /* padding: 0 2rem; */
+    padding: 0 1rem;
 }
 
 .stats-props>span {
@@ -313,7 +312,6 @@ select {
 
 .customers p {
     margin-bottom:2rem;
-    /* font-size: 1.6rem; */
 }
 
 .customers .stacks {
@@ -386,7 +384,6 @@ select {
 }
 
 .section3 {
-    /* height: 100vh; */
     margin-inline: 4rem ;
 }
 
@@ -411,11 +408,10 @@ select {
     background: color #f3f3f3;
     padding: 1.6rem;
     border-radius: 4px;
-    
 }
 
 .property-card {
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
     user-select: none;
     transition: transform ease-in-out 200ms;
     cursor: pointer;
@@ -466,7 +462,6 @@ select {
     width: 1rem;
     opacity: .4;
     margin-right: .2rem;
-    /* margin-top: 1.2rem; */
 }
 
 span.location{
@@ -504,12 +499,13 @@ span.location{
     }
 
     .nav-list {
+        display: none;
         flex-direction: column;
         margin: 0;
         width: 20rem;
         padding-left: 1.5rem;
         right: 0;
-        /* background-color: #fff; */
+        background-color: #fff;
         align-items: flex-start;
         position: absolute;
     }
@@ -517,19 +513,19 @@ span.location{
     .mid-nav-list {
         height: 100vh;
         inset-block: 0;
-        padding-top: 8rem;
+        padding-top: 10rem;
         z-index: 1000;
     }
 
     .right-nav-list {
-        bottom: 1rem;
+        bottom: 4rem;
         z-index: 1001;
         margin: 0;
     }
 
     .section1 {
         height: auto;
-        padding-block: 2rem 30rem; 
+        padding-block: 2rem 0; 
     }
 
     .section1 main {
@@ -540,7 +536,6 @@ span.location{
     main .main-landing-heading {
         font-weight: 600;
         font-size: 3.5rem;
-        padding-top: 0;
         max-width: 250px;
     }
 
@@ -559,29 +554,34 @@ span.location{
         gap: 1rem;
     }
 
+    main div.flexible-props,
+    aside.customers {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
     main div.flexible-props {
-        top: 48rem;
-        right: 15%;
-        left: 15%;
+        position: relative;
+        top: 9rem;
     }
 
     img.flexible-props-img {
         max-width: 320px;
-        /* width: 100%; */
         height: 320px;
         margin-top: 1.2rem;
     }
 
     aside.customers {
-        margin-top: 25rem;
-        align-content: center;
+        margin-top: 13rem;
+        margin-inline: 0;
     }
-
 
     section.section2 {
         flex-direction: column;
         align-items: center;
-        margin-inline: 2.5rem;
+        margin-inline: 0;
         padding: 3rem;
     }
 
@@ -591,6 +591,7 @@ span.location{
     
     .section2>div {
         margin-top: 2rem;
+        padding-inline: 0;
     }
 }
 
