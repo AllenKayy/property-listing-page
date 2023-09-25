@@ -20,47 +20,58 @@ fetch(apiURL, options)
     }
 })
 .then(data => {
-    if (data && data.hits) {
-        const getProperty = data.hits.map((property, index) => {
-            return `
-                <div class="property-card" data-index="${index}">
-                    <div class="cover-photo">
-                        <img src=${property.coverPhoto.url} class="property-image">
-                        <div class="property-purpose">${property.purpose}</div>
-                    </div>
-                    <p class="title-price">${property.title}</p>
-                    <p class="title-price">AED ${property.price}</p>
-                    <div>
-                        <img src="./assets/svg/location-dot-solid.svg" alt="location svg" class="location-svg">
-                        <span class="location">${property.location[2].name}, ${property.location[1].name}</span>
-                    </div> 
-                    <div class="property-modal">
-                        <div class="property-content">
-                            <!-- Property details go here -->
-                            <span class="close-modal">&times;</span>
-                        </div>
-                    </div>                  
-                </div>
-            `;
-        }).join('');
-        propertyEl.innerHTML = getProperty;
-
-        const propertyCards = document.querySelectorAll(".property-card")
-        propertyCards.forEach((card, index) => {
-            card.addEventListener("click", () => {
-                displayPropertyModal(data.hits[index], card);
-            });
-        });
-
-    } else {
-        throw new Error("Data format is incorrect");
-    }
+    mapProperty(data);
 })
 .catch(err => {
     console.error("Error fetching data", err);
     propertyEl.innerHTML = "Unable to get properties, kindly try again later";
     propertyEl.style.fontSize = "large"
-})
+});
+
+function mapProperty(data) {
+    if (data && data.hits) {
+        const getProperty = data.hits.map((property, index) => {
+            return createPropertyCard(property, index);
+        }).join('');
+        propertyEl.innerHTML = getProperty;
+        attachEventListeners(data.hits);
+    } else {
+        throw new Error("Data format is incorrect");
+    }
+    
+}
+
+function createPropertyCard(property, index) {
+    return `
+        <div class="property-card" data-index="${index}">
+            <div class="cover-photo">
+                <img src=${property.coverPhoto.url} class="property-image">
+                <div class="property-purpose">${property.purpose}</div>
+            </div>
+            <p class="title-price">${property.title}</p>
+            <p class="title-price">AED ${property.price}</p>
+            <div>
+                <img src="./assets/svg/location-dot-solid.svg" alt="location svg" class="location-svg">
+                <span class="location">${property.location[2].name}, ${property.location[1].name}</span>
+            </div> 
+            <div class="property-modal">
+                <div class="property-content">
+                    <!-- Property details go here -->
+                    <span class="close-modal">&times;</span>
+                </div>
+            </div>                  
+        </div>
+    `;
+}
+
+function attachEventListeners(properties) {
+    const propertyCards = document.querySelectorAll(".property-card")
+    propertyCards.forEach((card, index) => {
+        card.addEventListener("click", () => {
+            displayPropertyModal(properties[index], card);
+        });
+    });
+}
 
 function displayPropertyModal(property, card) {
     const propertyModal = card.querySelector(".property-modal");
@@ -83,12 +94,11 @@ function displayPropertyModal(property, card) {
         </div>
         <span class="close-modal">&times;</span>
     `;
-     // Close any previously open modal
+    
     if (openModal) {
         openModal.style.display = "none";
     }
 
-    // Show the current modal
     propertyModal.style.display = "block";
     openModal = propertyModal;
 }
